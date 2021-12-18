@@ -46,7 +46,11 @@ android {
         versionName flutterVersionName
         multiDexEnabled true
     }
-
+    configurations.all {
+        resolutionStrategy {
+            force 'com.android.support:support-v4:27.1.0'
+        }
+    }
     buildTypes {
         release {
             // TODO: Add your own signing config for the release build.
@@ -66,6 +70,6 @@ dependencies {
     implementation 'com.google.firebase:firebase-analytics'
     implementation 'com.google.firebase:firebase-auth'
     implementation 'androidx.multidex:multidex:2.0.1'
-    
+
 
 }
